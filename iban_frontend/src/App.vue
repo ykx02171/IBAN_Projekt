@@ -16,8 +16,9 @@
         <RouterLink to="/about">About</RouterLink>
       </nav> -->
       <div style="margin-top:20px">
-        API Response:
-        {{ result }}
+        <p>API Response:</p>
+        <p>{{ result }}</p>
+        
       </div>
     </div>
   </header>
@@ -78,6 +79,7 @@ nav a:first-of-type {
 
 @media (min-width: 1024px) {
   header {
+    width: 500px;
     display: flex;
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
