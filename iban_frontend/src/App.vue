@@ -11,14 +11,14 @@
       <el-input v-model="input" style="width: 240px" placeholder="Please input IBAN" />
         <el-button @click="submit">Submit</el-button>
       </div>  
-      <div style="margin-top:20px">
-        API Response:
-        {{ result }}
-      </div>
       <!-- <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav> -->
+      <div style="margin-top:20px">
+        API Response:
+        {{ result }}
+      </div>
     </div>
   </header>
 
@@ -91,6 +91,7 @@ nav a:first-of-type {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
+    flex-direction: column;
   }
 
   nav {

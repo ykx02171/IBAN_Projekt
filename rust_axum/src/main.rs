@@ -141,7 +141,7 @@ fn mod_iban(iban:&str)->String{
   }
   println!("Remainder: {}", remainder);
   if remainder != 1 {
-    return "IBAN failed checksum validation".to_string();
+    return "IBAN failed validation".to_string();
   }else{
     return "true".to_string();
   }
