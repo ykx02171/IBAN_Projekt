@@ -92,3 +92,12 @@ Diese Daten befinden sich in der Datei /rust_axum/src/data.rs.
 Dabei trat das Problem auf, dass die IBAN nach der Umwandlung der Buchstaben in Zahlen sehr lang wird.
 Dadurch kann die Zahl die üblichen Integer-Grenzen überschreiten.
 Deshalb habe ich nach einer Lösung gesucht und das sogenannte Rolling-Modulo-Verfahren (Rolling MOD 97) gefunden, das dieses Problem löst.
+10. Beim Verbinden von Frontend und Backend trat ein CORS-Problem auf.
+Nach einer Recherche im Internet wird eine Lösung gefunden und umgesetzt.
+```
+let cors = CorsLayer::new()
+    .allow_origin(Any)
+    .allow_methods(Any)
+    .allow_headers(Any);
+let app = create_app().layer(cors);
+```
